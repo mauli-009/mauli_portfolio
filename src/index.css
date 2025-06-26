@@ -1,0 +1,46 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.element {
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.element::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+.section-glimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-glimmer::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(187, 198, 173, 0.15), transparent);
+    transform: translateX(-100%) rotate(45deg);
+    transition: transform 0.7s ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .section-glimmer:hover::before {
+    transform: translateX(100%) rotate(45deg);
+  }
+  
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 3px;
+  }
