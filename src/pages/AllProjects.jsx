@@ -13,7 +13,6 @@ const AllProjects = () => {
   }, []);
 
   return (
-   
     <div
       className={`text-white transition-all duration-700 max-h-[85vh] overflow-y-auto custom-scrollbar px-2 ${
         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -23,28 +22,29 @@ const AllProjects = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
         {projects.map((project) => (
-           <Tilt
-           tiltMaxAngleX={6}
-           tiltMaxAngleY={6}
-           scale={1.02}
-           transitionSpeed={400}
-         >
-          <div
+          <Tilt
             key={project.id}
-            onClick={() => navigate(`/project/${project.id}`)}
-            className="bg-gradient-to-br from-[#1a1a1a] to-[#111] border border-gray-700 p-5 rounded-xl shadow hover:scale-[1.02] transition cursor-pointer section-glimmer"
+            tiltMaxAngleX={6}
+            tiltMaxAngleY={6}
+            scale={1.02}
+            transitionSpeed={400}
           >
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-sm text-muted mb-4">{project.summary}</p>
-            <button className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow">
-              View Details →
-            </button>
-          </div>
+            <div
+              onClick={() => navigate(`/project/${project.id}`)}
+              className="bg-gradient-to-br from-[#1a1a1a] to-[#111] border border-gray-700 p-5 rounded-xl shadow hover:scale-[1.02] transition cursor-pointer flex flex-col justify-between min-h-[240px] h-full"
+            >
+              <div>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-sm text-muted mb-4 line-clamp-3">{project.summary}</p>
+              </div>
+              <button className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow mt-auto w-max">
+                View Details →
+              </button>
+            </div>
           </Tilt>
         ))}
       </div>
     </div>
- 
   );
 };
 

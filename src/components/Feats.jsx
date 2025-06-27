@@ -14,12 +14,7 @@ const achievements = [
     subtitle: "1630 Current",
     icon: "/assets/leetcode.png",
   },
-  {
-    title: "GFG",
-    score: "498th in PICT",
-    subtitle: "Gold Badge",
-    icon: "/assets/gfg.png",
-  },
+,
 ];
 
 const Feats = () => {
@@ -44,6 +39,7 @@ const Feats = () => {
             <img
               src={feat.icon}
               alt={feat.title}
+            
               className="h-16 w-16 object-contain mb-4"
             />
             <h3 className="text-lg font-semibold text-white">{feat.score}</h3>
