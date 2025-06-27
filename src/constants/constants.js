@@ -1,10 +1,5 @@
 // Personal Info\
 
-import python from "../assets/python.png";
-import git from "../assets/git.png";
-import react from "../assets/react.png";
-import node from "../assets/node.png";
-import tailwind from "../assets/tailwind.png";
 
 export const personalInfo = {
   name: "Mauli Dudhat",
@@ -19,12 +14,13 @@ export const personalInfo = {
 
 // Skills (for slider)
 export const skills = [
-  { name: "Python", icon: python },
-  { name: "Git", icon: git },
-  { name: "React", icon: react },
-  { name: "Node.js", icon: node },
-  { name: "Tailwind", icon: tailwind },
+  { name: "Python", icon: "/assets/python.png" },
+  { name: "Git", icon: "/assets/git.png" },
+  { name: "React", icon: "/assets/react.png" },
+  { name: "Node.js", icon: "/assets/node.png" },
+  { name: "Tailwind", icon: "/assets/tailwind.png" },
 ];
+
 
 // Education
 export const education = [
