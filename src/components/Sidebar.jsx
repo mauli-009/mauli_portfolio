@@ -3,7 +3,7 @@ import { personalInfo } from "../constants/constants";
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { MdPhone, MdEmail, MdLocationOn, MdCalendarToday } from "react-icons/md";
 import RightContentWrapper from "./RightContentWrapper";
-
+import { Typewriter } from "react-simple-typewriter";
 const Sidebar = () => {
   return (
     <RightContentWrapper>
@@ -26,7 +26,17 @@ const Sidebar = () => {
           {/* Name and Role */}
           <div className="mt-4 text-center">
             <h2 className="text-xl font-bold">{personalInfo.name}</h2>
-            <p className="text-muted text-sm">{personalInfo.role}</p>
+            <p className="text-muted text-sm font-mono text-blue-300 h-5">
+              <Typewriter
+                words={['Full Stack Developer', 'AI Enthusiast', 'Machine Learning']}
+                loop={0}  // infinite
+                cursor
+                cursorStyle="|"
+                typeSpeed={60}
+                deleteSpeed={40}
+                delaySpeed={1500}
+              />
+            </p>
           </div>
 
           {/* Social Icons */}

@@ -40,7 +40,7 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
     >
       <RightContentWrapper><h2 className="text-3xl font-bold mb-6">Contact Me</h2></RightContentWrapper>
-        <RightContentWrapper>
+        
       <form
         ref={formRef}
         onSubmit={sendEmail}
@@ -81,7 +81,7 @@ const Contact = () => {
           <p className="text-green-400 text-sm mt-2">✅ Message sent successfully!</p>
         )}
       </form>
-      </RightContentWrapper>
+     
     </motion.div>
   );
 };

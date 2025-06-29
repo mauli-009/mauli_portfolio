@@ -3,7 +3,7 @@
 
 export const personalInfo = {
   name: "Mauli Dudhat",
-  role: "Full Stack Developer",
+  role: "Full Stack Developer || AI || Machine Learning",
   phone: "+91 9356887280",
   email: "maulidudhat2004@gmail.com",
   location: "Pune, India",
@@ -163,7 +163,7 @@ export const profiles = [
     platform: "LeetCode",
     stats: [
       "Solved 700+ problems",
-      "Rating: Knight",
+      "Rating: 1630",
       "Streak: 180+ days"
     ],
     image: "/assets/leetcode.png",
@@ -172,8 +172,8 @@ export const profiles = [
   {
     platform: "CodeChef",
     stats: [
-      "Rating: 1430 (2★)",
-      "Best: 1430",
+      "Rating: 1423 (2★)",
+      "Best: 1423",
       "Contests: 25+"
     ],
     image: "/assets/codechef1.png",
