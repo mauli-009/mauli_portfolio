@@ -109,7 +109,7 @@ export const education = [
 export const projects = [
   {
     id: "fullstack-blog-app",
-    title: "Fullstack Blog App",
+    title: "BlogIt",
     summary: "Modern blogging platform using React and Appwrite",
     github: "https://github.com/mauli-009/Blogit", // update as needed
     live: "", // optional
@@ -122,6 +122,7 @@ export const projects = [
   - Rich-text blog editor and post publishing system
   
   This project combines real-time features with a clean UI for a seamless writing experience.`
+  ,image: "/assets/blog.jpg"
   },
   {
     id: "unity-error-logger",
@@ -136,7 +137,8 @@ export const projects = [
   - Integrates with GitHub Copilot for suggestions
   - Export-friendly logs for team collaboration
   
-  Helps Unity developers resolve errors faster and more efficiently.`
+  Helps Unity developers resolve errors faster and more efficiently.`,
+  image: "/assets/Unity.png"
   },
   {
     id: "brainwave-ui",
@@ -150,7 +152,8 @@ export const projects = [
   - Built with React and styled using Tailwind CSS
   - Includes scroll-triggered animations and dark mode support
   
-  Designed to be easily adaptable for real-world product websites.`
+  Designed to be easily adaptable for real-world product websites.`,
+  image: "/assets/Brainwave.png"
   },
 
 

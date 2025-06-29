@@ -31,13 +31,24 @@ const AllProjects = () => {
           >
             <div
               onClick={() => navigate(`/project/${project.id}`)}
-              className="bg-gradient-to-br from-[#1a1a1a] to-[#111] border border-gray-700 p-5 rounded-xl shadow hover:scale-[1.02] transition cursor-pointer flex flex-col justify-between min-h-[240px] h-full"
+              className="relative bg-gradient-to-br from-[#1a1a1a]/80 to-[#111]/80 border border-gray-700 p-5 rounded-xl shadow hover:scale-[1.02] transition cursor-pointer flex flex-col justify-between min-h-[240px] h-full overflow-hidden"
             >
-              <div>
+              {/* Background image */}
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
+              )}
+
+              {/* Overlay content */}
+              <div className="relative z-10">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-sm text-muted mb-4 line-clamp-3">{project.summary}</p>
               </div>
-              <button className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow mt-auto w-max">
+
+              <button className="relative z-10 text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow mt-auto w-max">
                 View Details →
               </button>
             </div>
