@@ -176,7 +176,7 @@ export const profiles = [
       "Best: 1430",
       "Contests: 25+"
     ],
-    image: "/assets/codechef.png",
+    image: "/assets/codechef1.png",
     profileLink: "https://www.codechef.com/users/cloud_sheep_90"
   }
 ];
