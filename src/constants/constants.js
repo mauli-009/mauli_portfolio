@@ -155,3 +155,25 @@ export const projects = [
 
 
 ];
+export const profiles = [
+  {
+    platform: "LeetCode",
+    stats: [
+      "Solved 700+ problems",
+      "Rating: Knight",
+      "Streak: 180+ days"
+    ],
+    image: "/assets/leetcode.png",
+    profileLink: "https://leetcode.com/RecursiveMind_009/"
+  },
+  {
+    platform: "CodeChef",
+    stats: [
+      "Rating: 1430 (2★)",
+      "Best: 1430",
+      "Contests: 25+"
+    ],
+    image: "/assets/codechef.png",
+    profileLink: "https://www.codechef.com/users/cloud_sheep_90"
+  }
+];
