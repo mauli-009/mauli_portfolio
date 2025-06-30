@@ -8,6 +8,7 @@ import AllProjects from "./pages/AllProjects";
 import Contact from "./components/Contact";
 import Feats from "./components/Feats";
 import "./App.css"; // Keep global styles here if needed
+import Particles from "./components/3d/Particles";
 
 
 const App = () => {
@@ -21,20 +22,35 @@ const App = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#2b2626] via-[#1a1a1a] to-[#000] text-white relative">
-      {/* Optional animated particle layer */}
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/project/:id" element={<ProjectPage />} />
-            <Route path="/projects" element={<AllProjects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/feats" element={<Feats />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+<div className="relative min-h-screen">
+  {/* ✅ Particles background */}
+  <Particles
+    className="fixed top-0 left-0 w-full h-full z-[-1]"
+    particleCount={300}
+    particleSpread={8}
+    speed={0.2}
+    particleColors={["#4f46e5", "#6366f1", "#a5b4fc"]}
+    alphaParticles={true}
+    moveParticlesOnHover={true}
+    particleHoverFactor={1.2}
+    particleBaseSize={120}
+    sizeRandomness={0.6}
+  />
+
+  {/* ✅ Your main layout */}
+  <BrowserRouter>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<AllProjects />} />
+        <Route path="/project/:id" element={<ProjectPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/feats" element={<Feats />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+</div>
+
   );
 };
 
