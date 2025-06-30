@@ -9,17 +9,24 @@ import Contact from "./components/Contact";
 import Feats from "./components/Feats";
 import "./App.css"; // Keep global styles here if needed
 import Particles from "./components/3d/Particles";
-
+import SplashIntro from "./components/intro/SplashIntro";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [introDone, setIntroDone] = useState(false);
+  const [loadingDone, setLoadingDone] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timeout);
+    const introTimer = setTimeout(() => setIntroDone(true), 3500); // 3.5 seconds
+    const loaderTimer = setTimeout(() => setLoadingDone(true), 5000); // optional loader after
+
+    return () => {
+      clearTimeout(introTimer);
+      clearTimeout(loaderTimer);
+    };
   }, []);
 
-  if (loading) return <Loader />;
+
+  if (!loadingDone) return <Loader />; // optional
 
   return (
 <div className="relative min-h-screen">
