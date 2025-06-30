@@ -166,7 +166,7 @@ export const profiles = [
       "Rating: 1630",
       "Streak: 180+ days"
     ],
-    image: "/assets/leetcode.png",
+    image: "/assets/leetcode1.png",
     profileLink: "https://leetcode.com/RecursiveMind_009/"
   },
   {

@@ -13,7 +13,7 @@ const achievements = [
     title: "LeetCode",
     score: "2025",
     subtitle: "1630 Current",
-    icon: "/assets/leetcode.png",
+    icon: "/assets/leetcode1.png",
   },
 
 ];
