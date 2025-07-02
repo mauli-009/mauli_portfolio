@@ -2,6 +2,7 @@ import AboutSection from "../components/AboutSection";
 import SkillsSlider from "../components/SkillsSlider";
 import ProjectSlider from "../components/ProjectSlider";
 import { motion } from "framer-motion";
+import ProfileCardGrid from "../components/ProfileCardGrid ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -22,6 +23,7 @@ const Home = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <AboutSection />
+      <ProfileCardGrid />
       <SkillsSlider />
       <ProjectSlider />
     </motion.div>

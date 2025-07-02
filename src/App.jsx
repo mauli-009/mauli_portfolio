@@ -10,6 +10,9 @@ import Feats from "./components/Feats";
 import "./App.css"; // Keep global styles here if needed
 import Particles from "./components/3d/Particles";
 import SplashIntro from "./components/intro/SplashIntro";
+import Skills from "./pages/Skills";
+import Education from "./pages/Education";
+import Experience from "./pages/Experience";
 
 const App = () => {
   const [introDone, setIntroDone] = useState(false);
@@ -53,6 +56,9 @@ const App = () => {
         <Route path="/project/:id" element={<ProjectPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/feats" element={<Feats />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/experience" element={<Experience />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -180,3 +180,18 @@ export const profiles = [
     profileLink: "https://www.codechef.com/users/cloud_sheep_90"
   }
 ];
+
+
+export const skillsExtended = [
+  {
+    name: "React",
+    icon: "/assets/react.png",
+    description: "Built multiple interactive SPAs, optimized with hooks and context.",
+  },
+  {
+    name: "Node.js",
+    icon: "/assets/node.png",
+    description: "Developed REST APIs with Express and connected to MongoDB.",
+  },
+
+];

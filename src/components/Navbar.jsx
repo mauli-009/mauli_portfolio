@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // For hamburger icon
 
 const Navbar = () => {
-  const navItems = ["Home", "Projects", "Feats", "Contact"];
+  const navItems = ["Home", "Projects", "Feats", "Contact", "Education","Skills","Experience"];
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
