@@ -194,4 +194,56 @@ export const skillsExtended = [
     description: "Developed REST APIs with Express and connected to MongoDB.",
   },
 
+  {
+    name: "Tailwind CSS",
+    icon: "/assets/tailwind.png",
+    description: "Designed modern UIs using utility-first CSS for responsive layouts.",
+  },
+  {
+    name: "MongoDB",
+    icon: "/assets/MongoDB.png",
+    description: "Experience with NoSQL data models and Mongoose schema design.",
+  },
+  {
+    name: "Express.js",
+    icon: "/assets/express.png",
+    description: "Created scalable backend routes, auth systems, and middleware.",
+  },
+  {
+    name: "Python",
+    icon: "/assets/python.png",
+    description: "Used for data processing, automation, and ML model building.",
+  },
+  {
+    name: "Git & GitHub",
+    icon: "/assets/git.png",
+    description: "Version control, team collaboration, and CI/CD workflows.",
+  },
+  {
+    name: "C++",
+    icon: "/assets/cpp.png",
+    description: "Strong in DSA with 700+ problems solved across platforms.",
+  },
+  {
+    name: "Cloudflare",
+    icon: "/assets/Cloudflare.png",
+    description: "Realtime DB, Auth, Hosting, used in full-stack apps.",
+  },
+  {
+    name: "Next.js",
+    icon: "/assets/Next.js.png",
+    description: "SSR, file-based routing, optimized deployment for React apps.",
+  },
+ 
+  {
+    name: "Vite.js",
+    icon: "/assets/vite.png",
+    description: "Fast bundler used with React + Tailwind for lightning dev.",
+  },
+  {
+    name: "Redux",
+    icon: "/assets/Redux.png",
+    description: "Managed global state across complex React components.",
+  },
+
 ];

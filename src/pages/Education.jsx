@@ -14,6 +14,7 @@ const Education = () => {
 
 
         {/* College */}
+        
         <VerticalTimelineElement
           className="vertical-timeline-element--education "
           date="2023 - Present"
