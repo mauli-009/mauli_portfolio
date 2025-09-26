@@ -163,7 +163,7 @@ export const profiles = [
     platform: "LeetCode",
     stats: [
       "Solved 700+ problems",
-      "Rating: 1630",
+      "Rating: 1630+",
       "Streak: 180+ days"
     ],
     image: "/assets/leetcode1.png",
@@ -172,8 +172,8 @@ export const profiles = [
   {
     platform: "CodeChef",
     stats: [
-      "Rating: 1423 (2★)",
-      "Best: 1423",
+      "Rating: 1423+ (2★)",
+      "Best: 1423+",
       "Contests: 25+"
     ],
     image: "/assets/codechef1.png",
