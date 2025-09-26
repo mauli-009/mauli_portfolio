@@ -172,7 +172,7 @@ export const profiles = [
   {
     platform: "CodeChef",
     stats: [
-      "Rating: 1423+ (2★)",
+      "Rating: 1423+",
       "Best: 1423+",
       "Contests: 25+"
     ],
