@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 const RightContentWrapper = ({ children }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 60 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
-      className="flex flex-col gap-6  max-h-[88vh] overflow-y-auto overflow-x-hidden custom-scrollbar pr-2"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-6 overflow-x-hidden"
     >
       {children}
     </motion.div>

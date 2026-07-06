@@ -1,32 +1,41 @@
 import AboutSection from "../components/AboutSection";
 import SkillsSlider from "../components/SkillsSlider";
 import ProjectSlider from "../components/ProjectSlider";
-import { motion } from "framer-motion";
 import ProfileCardGrid from "../components/ProfileCardGrid ";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, staggerChildren: 0.2 },
-  },
-};
+import Skills from "./Skills";
+import Education from "./Education";
+import Feats from "../components/Feats";
+import Contact from "../components/Contact";
 
 const Home = () => {
   return (
-    <motion.div
-      className="flex flex-col gap-6"
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-    >
-      <AboutSection />
-      <ProfileCardGrid />
-      <SkillsSlider />
-      <ProjectSlider />
-    </motion.div>
+    <div className="flex flex-col gap-10">
+      <section id="about">
+        <AboutSection />
+        {/* <ProfileCardGrid /> */}
+      </section>
+
+      <section id="skills">
+        <SkillsSlider />
+        <Skills />
+      </section>
+
+      <section id="projects">
+        <ProjectSlider />
+      </section>
+
+      <section id="education">
+        <Education />
+      </section>
+
+      <section id="feats">
+        {/* <Feats /> */}
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 };
 

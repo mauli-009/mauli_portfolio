@@ -1,12 +1,26 @@
-import { NavLink } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import RightContentWrapper from "./RightContentWrapper";
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // For hamburger icon
+import { FiMenu, FiX } from "react-icons/fi";
+
+// Each nav item maps to a section id on the single-page Home.
+const navItems = [
+  { label: "About", id: "about" },
+  { label: "Skills", id: "skills" },
+  { label: "Projects", id: "projects" },
+  { label: "Education", id: "education" },
+  { label: "Achievements", id: "feats" },
+  { label: "Contact", id: "contact" },
+];
 
 const Navbar = () => {
-  const navItems = ["Home", "Projects", "Feats", "Contact", "Education","Skills","Experience"];
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleScroll = (id) => {
+    setMenuOpen(false);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <RightContentWrapper>
@@ -15,7 +29,7 @@ const Navbar = () => {
           {/* Brand / Logo */}
           <h1 className="text-blue-400 text-xl font-bold whitespace-nowrap">
             <Typewriter
-              words={['Mauli.dev', 'Portfolio', 'Projects']}
+              words={["Mauli.dev", "Portfolio", "Projects"]}
               loop={0}
               cursor
               cursorStyle="|"
@@ -28,17 +42,13 @@ const Navbar = () => {
           {/* Desktop Nav */}
           <ul className="hidden md:flex gap-6 text-muted text-sm md:text-base">
             {navItems.map((item) => (
-              <li key={item}>
-                <NavLink
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-blue-400 font-semibold border-b-2 border-blue-400 pb-1"
-                      : "hover:text-blue-300 transition"
-                  }
+              <li key={item.id}>
+                <button
+                  onClick={() => handleScroll(item.id)}
+                  className="hover:text-blue-300 transition"
                 >
-                  {item}
-                </NavLink>
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -55,18 +65,13 @@ const Navbar = () => {
         {menuOpen && (
           <ul className="flex flex-col items-start gap-4 px-6 pb-4 md:hidden text-muted text-sm bg-[#121212] border-t border-gray-700">
             {navItems.map((item) => (
-              <li key={item} className="w-full">
-                <NavLink
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-blue-400 font-semibold"
-                      : "hover:text-blue-300 transition"
-                  }
-                  onClick={() => setMenuOpen(false)} // Close on select
+              <li key={item.id} className="w-full">
+                <button
+                  onClick={() => handleScroll(item.id)}
+                  className="hover:text-blue-300 transition"
                 >
-                  {item}
-                </NavLink>
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>
