@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import ProjectPage from "./pages/ProjectPage";
 import Layout from "./components/Layout";
@@ -15,21 +14,15 @@ import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 
 const App = () => {
-  const [introDone, setIntroDone] = useState(false);
   const [loadingDone, setLoadingDone] = useState(false);
 
   useEffect(() => {
-    const introTimer = setTimeout(() => setIntroDone(true), 3500); // 3.5 seconds
-    const loaderTimer = setTimeout(() => setLoadingDone(true), 5000); // optional loader after
-
-    return () => {
-      clearTimeout(introTimer);
-      clearTimeout(loaderTimer);
-    };
+    const loaderTimer = setTimeout(() => setLoadingDone(true), 7000); // intro duration
+    return () => clearTimeout(loaderTimer);
   }, []);
 
 
-  if (!loadingDone) return <Loader />; // optional
+  if (!loadingDone) return <SplashIntro />; // animated intro with rotating words
 
   return (
 <div className="relative min-h-screen">
