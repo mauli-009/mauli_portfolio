@@ -79,7 +79,10 @@ export const skills = [
     name: "Vite",
     icon: "https://vitejs.dev/logo-with-shadow.png",
   },
-
+  {
+    name: "PyTorch",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+  },
 
 ];
 
@@ -210,7 +213,7 @@ export const profiles = [
     stats: [
       "Solved 700+ problems",
       "Rating: 1981+",
-      
+      "Streak: 180+ days"
     ],
     image: "/assets/leetcode1.png",
     profileLink: "https://leetcode.com/RecursiveMind_009/"
@@ -293,32 +296,32 @@ export const skillsExtended = [
   },
   {
     name: "Agentic AI",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/langchain/langchain-original.svg",
+    icon: "/assets/agentic-ai.svg",
     description: "Built multi-agent systems with tool use, planning, and autonomous task execution.",
   },
   {
     name: "LangGraph",
-    icon: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4",
+    icon: "/assets/langgraph.svg",
     description: "Designed stateful multi-agent workflows for intent extraction and pipeline orchestration.",
   },
   {
     name: "LangChain",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/langchain/langchain-original.svg",
+    icon: "/assets/langchain.svg",
     description: "Composed LLM chains, prompts, and retrievers for production AI apps.",
   },
   {
     name: "RAG",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opensearch/opensearch-original.svg",
+    icon: "/assets/rag.svg",
     description: "Retrieval-Augmented Generation with semantic search for grounded, contextual responses.",
   },
   {
     name: "LLMs",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg",
+    icon: "/assets/llms.svg",
     description: "Prompt engineering and integration with Groq, OpenAI, and open-source models.",
   },
   {
     name: "FastAPI",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+    icon: "/assets/fastapi.svg",
     description: "Built scalable inference and REST services for LLM-powered backends.",
   },
 
