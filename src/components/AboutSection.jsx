@@ -13,7 +13,7 @@ const fadeUp = {
 
 const highlights = [
   { label: "LeetCode Solved", value: "700+" },
-  { label: "Max Rating", value: "1981+" },
+  { label: "Max Rating", value: "1850+" },
   { label: "SGPA", value: "9.07" },
   { label: "MHT-CET", value: "97.89%" },
 ];

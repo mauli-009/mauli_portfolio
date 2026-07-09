@@ -114,7 +114,24 @@ export const education = [
 //       `points` = bullet list shown in the expanded description.
 //       `image` = path under /public/assets (see filenames below).
 export const projects = [
+
   {
+    id: "society-tracker",
+    title: "Society Maintenance Tracker",
+    summary: "Full-stack complaint-management platform for apartment societies with role-based workflows, photo uploads, and email notifications.",
+    tech: ["Next.js", "Node.js", "Express", "MongoDB", "Cloudinary", "JWT"],
+    github: "https://github.com/mauli-009/society-maintenance-tracker", // update if different
+    live: "https://society-maintenance-tracker-two.vercel.app/", // add your live demo URL here
+    image: "/assets/track_society.png",
+    points: [
+      "Built a role-based complaint-management system (resident/admin) with JWT authentication, where residents raise categorized complaints with photo evidence and track resolution progress in real time.",
+      "Engineered an append-only status-history model embedded in each complaint document, recording every state transition with actor, timestamp, and notes to produce a tamper-evident audit trail across the Open → In Progress → Resolved lifecycle.",
+      "Implemented configurable overdue detection computed on-read against an environment-driven threshold, surfacing neglected complaints at the top of the admin view with correct priority-weighted sorting.",
+      "Integrated Cloudinary for streamed in-memory photo uploads and Resend for non-blocking, fire-and-forget email notifications on status changes and pinned important notices, alongside an aggregation-powered admin dashboard reporting complaints by status, category, and overdue count.",
+    ],
+  },
+  {
+    
     id: "elevatecv",
     title: "ElevateCV",
     summary: "Agentic AI resume builder with a three-tier microservices architecture.",
@@ -212,22 +229,13 @@ export const profiles = [
     platform: "LeetCode",
     stats: [
       "Solved 700+ problems",
-      "Rating: 1981+",
+      "Rating: 1850+",
       "Streak: 180+ days"
     ],
     image: "/assets/leetcode1.png",
     profileLink: "https://leetcode.com/RecursiveMind_009/"
   },
-  {
-    platform: "CodeChef",
-    stats: [
-      "Rating: 1800+",
-      "Best: 1800+",
-      "Contests: 25+"
-    ],
-    image: "/assets/codechef1.png",
-    profileLink: "https://www.codechef.com/users/cloud_sheep_90"
-  }
+
 ];
 
 
